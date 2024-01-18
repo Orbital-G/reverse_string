@@ -22,7 +22,7 @@ def main(args=None):
     publisher_node = original_string()
 
     while rclpy.ok():
-        input_string = input('Enter somethig :')
+        input_string = input('Enter:')
         publisher_node.publish_string(input_string)
 
     publisher_node.destroy_node()
