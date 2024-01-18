@@ -19,7 +19,7 @@ class original_string(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    publisher_node = StringPublisherNode()
+    publisher_node = original_string()
 
     while rclpy.ok():
         input_string = input('Enter somethig :')
