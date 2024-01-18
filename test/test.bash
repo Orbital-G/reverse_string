@@ -8,8 +8,14 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
+expect <<EOF
+set timeout 5
 
-(echo "neko\n" | ros2 run ReverseString enter_string )
-timeout 1 ros2 run ReverseString reverse_string > /tmp/ReverseString.log
+spawn ros2 run ReverseString enter_string
+expect "Enter:"
+send "neko\n"
+expect "Reversed: oken"
+exit 0
+EOF
 
 (cat /tmp/ReverseString.log | grep 'Reversed: oken')
