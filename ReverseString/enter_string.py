@@ -12,10 +12,10 @@ class original_string(Node):
         self.publisher = self.create_publisher(String, '/original_string', 10)
 
     def publish_string(self, input_string):
-    msg = String()
-    msg.data = input_string
-    self.publisher.publish(msg)
-    self.get_logger().info(f'Published: {input_string}')
+        msg = String()
+        msg.data = input_string
+        self.publisher.publish(msg)
+        self.get_logger().info(f'Published: {input_string}')
 
 def main(args=None):
     rclpy.init(args=args)
