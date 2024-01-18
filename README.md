@@ -14,7 +14,7 @@ $ git clone https://github.com/Orbital-G/robosys2023_ReverseString.git
 reverse_stringとenter_stringをそれぞれ別の端末で実行します。  
 
 入力を待機しているenter_stringに文字列を打ち込み、Enterキーを押すと
-文字列がトピックとして送信(パブリッシュ)され、reverse_stringで文字列のトピックを受信(サブスクライブ)して逆に変換し、それを表示します
+文字列がトピックとして送信(パブリッシュ)され、reverse_stringで文字列のトピックを受信(サブスクライブ)して逆に変換し、それを出力します
 - 端末1
 ```
 $ ros2 run ReverseString enter_string
