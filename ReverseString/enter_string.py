@@ -22,7 +22,10 @@ def main(args=None):
     publisher_node = original_string()
 
     while rclpy.ok():
-        input_string = input('Enter:')
+        try:
+            input_string = input('Enter:')
+        except EOFError:
+            break
         publisher_node.publish_string(input_string)
 
     publisher_node.destroy_node()
