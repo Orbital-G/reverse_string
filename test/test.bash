@@ -7,9 +7,9 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source ~/.bashrc
+source $dir/.bashrc
 
-echo "neko" | ros2 run ReverseString original_string
-timeout 10 ros2 run ReverseString reversed_string > /tmp/ReverseString.log
+(echo "neko\n" | ros2 run ReverseString enter_string )
+timeout 1 ros2 run ReverseString reverse_string > /tmp/ReverseString.log
 
-cat /tmp/ReverseString.log | grep 'Reversed: oken'
+(cat /tmp/ReverseString.log | grep 'Reversed: oken')
