@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-22.04
     countainer: ryuichiueda/ubuntu22.04-ros2:latest
     steps:
-    - uses: actions/checkout@v2
-    - name: build and test
-      run: |
-        rsync -av ./ /root/ros2_ws/src/ReverseString/
-        cd /root/ros2_ws
-        rosdep update
-        rosdep install -i --from-path src --rosdistro humble -y 
-        bash -xv ./src/ReverseString/test/test.bash /root
+      - uses: actions/checkout@v2
+      - name: build and test
+        run: |
+          rsync -av ./ /root/ros2_ws/src/ReverseString/
+          cd /root/ros2_ws
+          rosdep update
+          rosdep install -i --from-path src --rosdistro humble -y 
+          bash -xv ./src/ReverseString/test/test.bash /root
