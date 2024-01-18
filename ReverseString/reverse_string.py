@@ -11,6 +11,7 @@ class reversed_string(Node):
         original_string = msg.data
         reversed_string = self.reversed_string(original_string)
         self.get_logger().info(f"Reversed String: {reversed_string}")
+        print(f"reverce: {reversed_string}")
 
     def reversed_string(self, input_string):
         return input_string[::-1]
