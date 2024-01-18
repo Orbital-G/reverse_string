@@ -10,7 +10,7 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-(echo -e "neko\n" | ros2 run ReverseString enter_string > /tmp/original.log 2>&1) &
+(echo -e "oken\n" | ros2 run ReverseString enter_string > /tmp/original.log 2>&1) &
 sleep 10
 
 (ros2 run ReverseString reverse_string > /tmp/reversed.log 2>&1) &
