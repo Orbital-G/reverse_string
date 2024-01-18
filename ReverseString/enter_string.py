@@ -23,7 +23,7 @@ def main(args=None):
 
     while rclpy.ok():
         try:
-            input_string = input('Enter:')
+            input_string = input('Enter: ')
         except EOFError:
             break
         publisher_node.publish_string(input_string)
