@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        'enter_string = ReverseString.enter_string:main',
+        'reverse_string = ReverseString.reverse_string:main',
         ],
     },
 )
