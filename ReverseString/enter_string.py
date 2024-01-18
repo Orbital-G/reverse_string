@@ -11,7 +11,7 @@ class original_string(Node):
         super().__init__('original_string')
         self.publisher = self.create_publisher(String, '/original_string', 10)
 
-    def publish_string(self, input_string)
+    def publish_string(self, input_string):
     msg = String()
     msg.data = input_string
     self.publisher.publish(msg)
@@ -22,7 +22,7 @@ def main(args=None):
     publisher_node = StringPublisherNode()
 
     while rclpy.ok():
-        input_string = input
+        input_string = input('Enter somethig :')
         publisher_node.publish_string(input_string)
 
     publisher_node.destroy_node()
