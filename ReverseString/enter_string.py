@@ -23,7 +23,7 @@ def main(args=None):
 
     while rclpy.ok():
         input_string = input
-        publisher_node.publish_string(user_input)
+        publisher_node.publish_string(input_string)
 
     publisher_node.destroy_node()
     rclpy.shutdown()
