@@ -4,7 +4,7 @@
 このパッケージは2023年度ロボットシステム学の課題2に提出するパッケージです。  
 標準入力に打ち込んだ文字列を逆にして返します(例: neko→oken)
 
-## インストール方法
+## 使用の準備
 使っているROS 2のワークスペース内のsrc下にこのリポジトリをクローンしてください。
 ```
 $ git clone https://github.com/Orbital-G/robosys2023_ReverseString.git
