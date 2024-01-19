@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>ReverseString</name>
+  <name>reverse_string</name>
   <version>0.0.0</version>
   <description>return the entered string in reverse</description>
   <maintainer email="s22c1033ru@s.chibakoudai.jp">jojo</maintainer>
@@ -9,7 +9,6 @@
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>launch_ros</exec_depend>
-
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

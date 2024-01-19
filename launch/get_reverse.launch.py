@@ -6,11 +6,11 @@ import launch_ros.actions
 def generate_launch_description():
 
     enter_string = launch_ros.actions.node(
-        package='ReverseString',
+        package='reverse_string',
         executable='enter_string',
         )
     reverse_string = launch_ros.actions.Node(
-        package='ReverseString',
+        package='reverse_string',
         executable='reverse_string',
         output='screen'
         )

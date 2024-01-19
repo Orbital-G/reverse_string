@@ -1,6 +1,8 @@
 from setuptools import setup
+import os
+from glob import glob
 
-package_name = 'ReverseString'
+package_name = 'reverse_string'
 
 setup(
     name=package_name,
@@ -21,8 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'enter_string = ReverseString.enter_string:main',
-        'reverse_string = ReverseString.reverse_string:main',
+        'enter_string = reverse_string.enter_string:main',
+        'reverse_string = reverse_string.reverse_string:main',
         ],
     },
 )
