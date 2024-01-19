@@ -14,10 +14,13 @@ source $dir/.bashrc
 (echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1) &
 sleep 10
 
-if ! cat /tmp/reversed.log | grep -q 'Reversed String: neko'; then
-  echo "NG: neko not found"
-  exit 1
+if [ -e /tmp/reversed.log ]; then
+    echo "reversed.log exists."
 else
-  echo "OK"
-  exit 0
+    echo "reversed.log not found."
 fi
+
+(res=0; cat /tmp/reversed.log | grep -q 'Reversed String: neko' || { echo "NG: neko not found"; res=1; })
+
+[ "$res" = 0 ] && echo "OK" || echo "Test Failed"
+exit $res
