@@ -20,7 +20,7 @@ else
     echo "reversed.log not found."
 fi
 
-(res=0; cat /tmp/reversed.log | grep -q 'Reversed String: neko' || { echo "NG: neko not found"; res=1; })
+(res=0; cat /tmp/reversed.log | grep -a 'Reversed String: neko' || { echo "NG: neko not found"; res=1; })
 
 [ "$res" = 0 ] && echo "OK" || echo "Test Failed"
 exit $res
