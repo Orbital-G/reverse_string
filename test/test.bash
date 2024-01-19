@@ -20,6 +20,8 @@ else
     echo "reversed.log not found."
 fi
 
+cat /tmp/reversed.log
+
 if grep -a 'Reversed String: neko' /tmp/reversed.log; then
     echo "OK"
     exit 0
