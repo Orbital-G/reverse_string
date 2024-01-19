@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -xv
 # SPDX-FileCopyrightText: 2024 Kadono Kodai
 # SPDX-License-Identefier: BSD-3-Clause
 
@@ -14,7 +14,10 @@ source $dir/.bashrc
 (echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1) &
 sleep 10
 
-(res=0; cat /tmp/reversed.log | grep -q 'Reversed String: neko' || { echo "NG: neko not found"; res=1; })
-
-[ "$res" = 0 ] && echo "OK" || echo "Test Failed"
-exit $res
+if ! cat /tmp/reversed.log | grep -q 'Reversed String: neko'; then
+  echo "NG: neko not found"
+  exit 1
+else
+  echo "OK"
+  exit 0
+fi
