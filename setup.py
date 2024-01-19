@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'reverseString'
+package_name = 'reverse_String'
 
 setup(
     name=package_name,
