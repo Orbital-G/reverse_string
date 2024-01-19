@@ -14,12 +14,6 @@ source $dir/.bashrc
 (echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1) &
 sleep 10
 
-if [ -e /tmp/reversed.log ]; then
-    echo "reversed.log exists."
-else
-    echo "reversed.log not found."
-fi
-
 cat /tmp/reversed.log
 
 grep -a 'Reversed String: neko' /tmp/reversed.log
