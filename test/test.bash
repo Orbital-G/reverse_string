@@ -22,10 +22,4 @@ fi
 
 cat /tmp/reversed.log
 
-if grep -a 'Reversed String: neko' /tmp/reversed.log; then
-    echo "OK"
-    exit 0
-else
-    echo "Test Failed: neko not found"
-    exit 1
-fi
+grep -a 'Reversed String: neko' /tmp/reversed.log
