@@ -1,6 +1,8 @@
 from setuptools import setup
+import os
+from glob import glob
 
-package_name = 'reverse_String'
+package_name = 'reverse_string'
 
 setup(
     name=package_name,
