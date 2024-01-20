@@ -10,10 +10,10 @@ colcon build
 source $dir/.bashrc
 
 (ros2 run reverse_string reverse_string > /tmp/reversed.log 2>&1)&
-sleep 5
+sleep 10
 
-(echo -e "oken\n" | ros2 run reverse_string enter_string)&
-sleep 5
+(echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1)&
+sleep 10
 
 cat /tmp/reversed.log
 # | grep -a 'Reversed String: neko' 
