@@ -19,7 +19,7 @@ sleep 10
 sleep 5
 jobs
 
-if ! cat /tmp/reversed.log | grep -q 'Reversed String: neko'; then
+if ! cat /tmp/reversed.log | grep -a 'Reversed String: neko'; then
   echo "NG: neko not found"
   exit 1
 else
