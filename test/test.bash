@@ -14,7 +14,6 @@ sleep 10
 
 jobs
 
-ros2 topic list | grep original_string
 (echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1)&
 sleep 10
 
