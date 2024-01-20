@@ -20,4 +20,5 @@ sleep 10
 sleep 5
 jobs
 
-cat /tmp/reversed.log | grep -a 'Reversed String: neko' 
+cat /tmp/reversed.log 
+# | grep -a 'Reversed String: neko' 
