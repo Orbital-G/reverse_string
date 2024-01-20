@@ -17,7 +17,7 @@ jobs
 (echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1)&
 sleep 10
 
+sleep 5
 jobs
 
-cat /tmp/reversed.log
-# | grep -a 'Reversed String: neko' 
+cat /tmp/reversed.log | grep -a 'Reversed String: neko' 
