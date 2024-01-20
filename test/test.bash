@@ -9,10 +9,10 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
 
-(ros2 run reverse_string reverse_string > /tmp/reversed.log 2>&1)&
+(ros2 run reverse_string reverse_string)&
 sleep 20
 
-(echo -e "oken\n" | ros2 run reverse_string enter_string > /tmp/original.log 2>&1)&
+(echo -e "oken\n" | ros2 run reverse_string enter_string)&
 sleep 20
 
 cat /tmp/reversed.log
